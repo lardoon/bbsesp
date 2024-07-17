@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+    <th>{{Die.name}} Roll</th>
+    <th>Probability</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let roll of [11,21,31,41,51,61]">
+      <td>{{roll}}-{{roll + 5}}</td>
+      <td>{{Die.probability(roll, roll + 5) | percent:'1.1'}}</td>
+    </tr>
+  </tbody>
+</table>
